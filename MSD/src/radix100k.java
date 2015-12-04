@@ -71,11 +71,11 @@ public class radix100k {
     public static void runSample() {
 
         Random random = new Random();
-        int[] n = new int[1000000];
+        int[] n = new int[100000];
 
         for( int i = 0 ; i < n.length ; i++ ) {
             for ( int i1 = 0 ; i1 < n.length ; i1++ ) {
-                n[i1] = random.nextInt(1000000);
+                n[i1] = random.nextInt(100000);
             }
         }
 
