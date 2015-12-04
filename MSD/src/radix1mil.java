@@ -99,7 +99,7 @@ public class radix1mil {
         etime = System.nanoTime();
         lsdRadixSort(n2);
         etime = System.nanoTime() - etime;
-        System.out.println(array2list(n2));
+        //System.out.println(array2list(n2));
         System.out.printf("Elapsed time: %fs%n", ((double) etime / 1000000000.0));
 
         return;
