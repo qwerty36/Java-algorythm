@@ -1,8 +1,8 @@
 import java.util.*;
 
-public class radix {
+public class radix100k {
 
-    public radix() {
+    public radix100k() {
 
         return;
     }
@@ -68,24 +68,24 @@ public class radix {
         return lims;
     }
 
-    public static void runSample(int[] lists) {
+    public static void runSample() {
 
         Random random = new Random();
-        int[] n = new int[1];
+        int[] n = new int[1000000];
 
         for( int i = 0 ; i < n.length ; i++ ) {
             for ( int i1 = 0 ; i1 < n.length ; i1++ ) {
-                n[i1] = random.nextInt(255);
+                n[i1] = random.nextInt(1000000);
             }
         }
 
         long etime;
-        lsdRadixSort(lists); // do one pass to set up environment to remove it from timings
-        System.out.println(array2list(lists));
+        lsdRadixSort(n); // do one pass to set up environment to remove it from timings
+        System.out.println(array2list(n));
         etime = System.nanoTime();
-        lists = lsdRadixSort(lists);
+        n = lsdRadixSort(n);
         etime = System.nanoTime() - etime;
-        System.out.println(array2list(lists));
+        System.out.println(array2list(n));
         System.out.printf("Elapsed time: %fs%n", ((double) etime / 1000000000.0));
         System.out.println();
 
@@ -104,9 +104,9 @@ public class radix {
         return target;
     }
 
-    public static void Main(String[] args) {
+    public static void main(String[] args) {
 
-        runSample(lists);
+        runSample();
 
         return;
     }

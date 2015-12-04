@@ -3,7 +3,7 @@
  *  Execution:   java MSD < input.txt
  *  Dependencies: StdIn.java StdOut.java
  *
- *  Sort an array of strings or integers using MSD radix sort.
+ *  Sort an array of strings or integers using MSD radix100k sort.
  *
  *  % java MSD < shells.txt
  *  are
@@ -25,7 +25,7 @@
 
 /**
  *  The <tt>MSD</tt> class provides static methods for sorting an
- *  array of extended ASCII strings or integers using MSD radix sort.
+ *  array of extended ASCII strings or integers using MSD radix100k sort.
  *  <p>
  *  For additional documentation,
  *  see <a href="http://algs4.cs.princeton.edu/51radix">Section 5.1</a> of
@@ -208,7 +208,7 @@ public class MSD {
 
     /**
      * Reads in a sequence of extended ASCII strings from standard input;
-     * MSD radix sorts them;
+     * MSD radix100k sorts them;
      * and prints them to standard output in ascending order.
      */
     public static void main(String[] args) {
