@@ -70,25 +70,37 @@ public class radix1mil {
 
     public static void runSample() {
 
-        Random random = new Random();
-        int[] n = new int[1000000];
-
-        for( int i = 0 ; i < n.length ; i++ ) {
-            for ( int i1 = 0 ; i1 < n.length ; i1++ ) {
-                n[i1] = random.nextInt(1000000);
-            }
+        Random random1 = new Random();
+        int[] n1 = new int[1000000];
+        for ( int i1 = 0 ; i1 < n1.length ; i1++ ) {
+            n1[i1] = random1.nextInt(1000000);
         }
 
-        long etime;
-        lsdRadixSort(n); // do one pass to set up environment to remove it from timings
-        System.out.println(array2list(n));
-        etime = System.nanoTime();
-        n = lsdRadixSort(n);
-        etime = System.nanoTime() - etime;
-        System.out.println(array2list(n));
-        System.out.printf("Elapsed time: %fs%n", ((double) etime / 1000000000.0));
-        System.out.println();
+        int[] n2 = new int[1000000];
+        int count = 0;
+        for (int i2 =1000000 ; i2>0; i2-- ){
+            n2[count] = i2;
+            count++;
+        }
 
+
+
+        long etime;
+        lsdRadixSort(n1);
+        lsdRadixSort(n2);
+
+        System.out.println("\n1 Million random numbers Radix sort:\n");
+        etime = System.nanoTime();
+        lsdRadixSort(n1);
+        etime = System.nanoTime() - etime;
+        System.out.printf("Elapsed time: %fs%n", ((double) etime / 1000000000.0));
+
+        System.out.println("\n\n\n1 Million random numbers reversed Radix sort:\n");
+        etime = System.nanoTime();
+        lsdRadixSort(n2);
+        etime = System.nanoTime() - etime;
+        System.out.println(array2list(n2));
+        System.out.printf("Elapsed time: %fs%n", ((double) etime / 1000000000.0));
 
         return;
     }
