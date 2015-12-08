@@ -94,6 +94,7 @@ public class radix100k {
         lsdRadixSort(n1);
         etime = System.nanoTime() - etime;
         System.out.printf("Elapsed time: %fs%n", ((double) etime / 1000000000.0));
+        System.gc();
 
         System.out.println("\n\n\n100k random numbers reversed Radix sort:\n");
         etime = System.nanoTime();
@@ -101,6 +102,7 @@ public class radix100k {
         etime = System.nanoTime() - etime;
         //System.out.println(array2list(n2));
         System.out.printf("Elapsed time: %fs%n", ((double) etime / 1000000000.0));
+        System.gc();
 
         return;
     }
