@@ -100,7 +100,7 @@ public class pckiller {
         System.out.printf("Elapsed time: %fs%n", ((double) etime / 1000000000.0));
         System.gc();
 
-        System.out.println("\n\n\n10mil random numbers reversed Radix sort:\n");
+        System.out.println("\n\n\n10mill random numbers reversed Radix sort:\n");
         etime = System.nanoTime();
         lsdRadixSort(n2);
         etime = System.nanoTime() - etime;
